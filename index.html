@@ -514,7 +514,13 @@
     .menu-przycisk { background: none; border: 1px solid var(--grafit); border-radius: 50px; padding: 8px 16px; font: inherit; color: var(--grafit); cursor: pointer; }
     .nav-links.otwarte { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 16px 24px; box-shadow: 0 12px 24px rgba(0,0,0,.08); }
     @media (min-width: 700px) { .menu-przycisk { display: none; } .nav-links.otwarte { position: static; flex-direction: row; box-shadow: none; padding: 0; } }
+      .foto { margin: 0; position: relative; border-radius: var(--radius, 24px); overflow: hidden; box-shadow: 0 18px 40px rgba(59,31,43,.10); }
+    .foto img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .foto figcaption { position: absolute; right: 12px; bottom: 10px; font-size: .72rem; color: #fff; background: rgba(59,31,43,.55); padding: 3px 10px; border-radius: 50px; }
+    .foto-szeroka { margin: 24px 0 8px; }
+    .foto-szeroka img { aspect-ratio: 21 / 9; }
   </style>
+  <meta property="og:image" content="https://andrzejkawalec.github.io/luvene-laser-wzor/img/hero.jpg">
 </head>
 <body>
 <header>
@@ -547,7 +553,7 @@
           <a href="#kontakt" class="btn btn-ghost focus-visible">Zarezerwuj termin</a>
         </div>
       </div>
-      <div class="hero-placeholder" aria-label="Miejsce na zdjęcie lasera w gabinecie">[ZDJĘCIE: laser w gabinecie]</div>
+      <figure class="foto foto-hero"><img src="img/hero.jpg" alt="Laser diodowy do depilacji w jasnym gabinecie kosmetycznym" width="1600" height="1067" fetchpriority="high"><figcaption>Zdjęcie poglądowe</figcaption></figure>
     </div>
   </section>
 
@@ -584,7 +590,7 @@
       <h2>Urządzenie w liczbach</h2>
       <div class="cards cards-2">
         <div class="card">
-          <div class="placeholder-img">[ZDJĘCIE: panel lasera Primelase Excellence]</div>
+          <figure class="foto"><img src="img/zabieg.jpg" alt="Kosmetolożka w okularach ochronnych wykonuje depilację laserową nóg" width="1600" height="1067" loading="lazy"><figcaption>Zdjęcie poglądowe</figcaption></figure>
           <ul class="features" style="list-style:none; padding-left:0;">
             <li><strong>Długości fal:</strong> 755 / 810 / 1060 nm (zależnie od głowic)</li>
             <li><strong>Moc szczytowa diody:</strong> do 4800 W</li>
@@ -682,6 +688,7 @@
   <section class="scroll-margin" id="jak-dziala">
     <div class="container">
       <h2>Jak to działa? 4 proste kroki</h2>
+      <figure class="foto foto-szeroka"><img src="img/szkolenie.jpg" alt="Szkolenie stanowiskowe z obsługi lasera w salonie" width="1600" height="1067" loading="lazy"><figcaption>Szkolenie przy pierwszym najmie — zdjęcie poglądowe</figcaption></figure>
       <div class="steps" style="margin-top:32px;">
         <div class="step"><div class="step-num"></div><div><h3>Rezerwacja i zadatek</h3><p>Wybierasz termin, podpisujemy umowę ramową, płacisz 30% zadatku.</p></div></div>
         <div class="step"><div class="step-num"></div><div><h3>Dowóz i uruchomienie</h3><p>Przywozimy laser, ustawiamy w Twoim gabinecie i sprawdzamy działanie.</p></div></div>

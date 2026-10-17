@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LUVENE BEAUTY – wynajem lasera diodowego Primelase Excellence</title>
-  <meta name="description" content="Wynajem lasera diodowego Primelase Excellence dla salonów kosmetycznych i gabinetów w województwie świętokrzyskim. Doba próbna 790 zł, dowóz i szkolenie w cenie.">
+  <meta name="description" content="Wynajem lasera diodowego Primelase Excellence dla salonów kosmetycznych i gabinetów w województwie świętokrzyskim. Oferta dla profesjonalistów. Transport i szkolenie z obsługi w cenie najmu.">
   <meta property="og:title" content="LUVENE BEAUTY – laser diodowy Primelase Excellence w Twoim salonie">
-  <meta property="og:description" content="Najem na doby lasera diodowego Primelase Excellence. Bez inwestycji 150–240 tys. zł. Dowóz, uruchomienie i szkolenie w cenie. Sprawdź cennik i kalkulator opłacalności.">
+  <meta property="og:description" content="Najem na doby lasera diodowego Primelase Excellence dla salonów i gabinetów. Bez kosztownej inwestycji w sprzęt. Transport i szkolenie z obsługi w cenie najmu.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.luwenebeauty.pl/">
   <meta property="og:locale" content="pl_PL">
@@ -521,10 +521,26 @@
     .foto-szeroka img { aspect-ratio: 21 / 9; }
     .foto-hero { background: #fff; }
     .foto-hero img { aspect-ratio: 1 / 1; object-fit: contain; }
+    .bramka { position: fixed; inset: 0; z-index: 1000; background: rgba(59,31,43,.72); display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .bramka[hidden] { display: none; }
+    .bramka-okno { background: #fff; color: var(--grafit); max-width: 520px; border-radius: 24px; padding: 28px; box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+    .bramka-okno h2 { font-size: 1.6rem; margin: 0 0 12px; }
+    .bramka-przyciski { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
   </style>
   <meta property="og:image" content="https://andrzejkawalec.github.io/luvene-laser-wzor/img/primelase-urzadzenie.jpg">
 </head>
 <body>
+<div class="bramka" id="bramka" role="dialog" aria-modal="true" aria-labelledby="bramka-tytul">
+  <div class="bramka-okno">
+    <h2 id="bramka-tytul">Strona dla profesjonalistów</h2>
+    <p>Ta strona dotyczy wyrobu medycznego przeznaczonego do używania przez profesjonalistów. Jest skierowana wyłącznie do salonów kosmetycznych, gabinetów i osób zawodowo wykonujących zabiegi.</p>
+    <p>Czy prowadzisz salon, gabinet lub zawodowo wykonujesz zabiegi?</p>
+    <div class="bramka-przyciski">
+      <button type="button" class="btn" id="bramka-tak">Tak, jestem profesjonalistą</button>
+      <a class="btn btn-ghost" href="https://www.google.pl/">Nie, wychodzę</a>
+    </div>
+  </div>
+</div>
 <header>
   <div class="container nav-wrap">
     <a href="#" class="logo focus-visible" aria-label="LUVENE BEAUTY – strona główna">LUVENE<span>BEAUTY</span></a>
@@ -549,7 +565,8 @@
       <div>
         <div class="section-label">WYNAJEM LASERA DIODOWEGO</div>
         <h1>Laser medyczny Primelase Excellence w Twoim salonie — na dzień, weekend albo tydzień.</h1>
-        <p class="lead">Bez inwestycji 150–240 tys. zł. Dowóz, uruchomienie i szkolenie w cenie.</p>
+        <p class="lead">Bez kosztownej inwestycji w sprzęt. Transport i szkolenie z obsługi w cenie najmu.</p>
+        <p class="small">Oferta wyłącznie dla salonów kosmetycznych, gabinetów i osób zawodowo wykonujących zabiegi.</p>
         <div class="hero-actions">
           <a href="#cennik" class="btn focus-visible">Sprawdź ceny</a>
           <a href="#kontakt" class="btn btn-ghost focus-visible">Zarezerwuj termin</a>
@@ -566,20 +583,20 @@
       <h2>Dlaczego najem zamiast zakupu?</h2>
       <div class="cards cards-3">
         <article class="card visible">
-          <h3>0&nbsp;zł&nbsp;zakupu</h3>
-          <p>Nie zamrażasz kapitału w sprzęcie za 150–240 tys. zł. Płacisz tylko za konkretny termin.</p>
+          <h3>Bez kosztownego zakupu</h3>
+          <p>Nie zamrażasz kapitału w drogim sprzęcie. Płacisz tylko za konkretny termin.</p>
         </article>
         <article class="card visible">
           <h3>Zarabiasz od pierwszego dnia</h3>
           <p>Ustaw laser w swoim gabinecie, umów klientki i realizuj zabiegi bez czekania na zwrot inwestycji.</p>
         </article>
         <article class="card visible">
-          <h3>Fototypy I–VI</h3>
-          <p>Bezpieczna i skuteczna praca na szerokiej gamie skór — dzięki długościom fal 755, 810 i 1060 nm.</p>
+          <h3>Praca według instrukcji producenta</h3>
+          <p>Głowicę i parametry zabiegu dobierasz zgodnie z instrukcją używania i szkoleniem — do rodzaju skóry i włosa.</p>
         </article>
         <article class="card visible">
-          <h3>Dowóz i szkolenie</h3>
-          <p>Przywozimy urządzenie, uruchamiamy, szkolimy Ciebie lub Twoją kosmetolożkę. Zero logistyki.</p>
+          <h3>Transport i szkolenie</h3>
+          <p>Przywozimy urządzenie i szkolimy z obsługi Ciebie lub Twoją kosmetolożkę. Transport i szkolenie z obsługi w cenie najmu.</p>
         </article>
       </div>
     </div>
@@ -594,21 +611,21 @@
         <div class="card">
           <figure class="foto"><img src="img/primelase-zabieg-nogi.jpg" alt="Depilacja nóg głowicą Primelase Excellence, w tle uchwyt głowicy na urządzeniu" width="960" height="760" loading="lazy"><figcaption>fot. Sinclair</figcaption></figure>
           <ul class="features" style="list-style:none; padding-left:0;">
-            <li><strong>Długości fal:</strong> 755 / 810 / 1060 nm (zależnie od głowic)</li>
+            <li><strong>Długości fal:</strong> 755 / 810 / 1060 nm oraz 810+940+1060 nm (zależnie od głowic)</li>
             <li><strong>Moc szczytowa diody:</strong> do 4800 W</li>
-            <li><strong>Impuls:</strong> 3–400 ms</li>
+            <li><strong>Impuls:</strong> od 3 ms</li>
             <li><strong>Tryb stacjonarny:</strong> 1–3 Hz</li>
             <li><strong>Tryb in-motion:</strong> 5–10 Hz</li>
             <li><strong>Chłodzenie kontaktowe:</strong> szafir +5°C</li>
-            <li><strong>Fototypy:</strong> I–VI</li>
-            <li><strong>Wyrób medyczny CE, FDA 510(k)</strong></li>
+            <li><strong>Wyrób medyczny z oznakowaniem CE</strong></li>
           </ul>
-          <p class="small" style="margin-top:20px;">Konfiguracja głowic: [DO UZUPEŁNIENIA]</p>
+          <p class="small" style="margin-top:20px;">Dane techniczne według materiałów producenta [DO POTWIERDZENIA z instrukcją używania]. Konfiguracja głowic: [DO UZUPEŁNIENIA]</p>
         </div>
         <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
           <figure class="foto" style="margin-bottom:24px;"><img src="img/primelase-ekran.jpg" alt="Panel dotykowy i głowica lasera Primelase Excellence" width="841" height="443" loading="lazy"><figcaption>fot. Sinclair</figcaption></figure>
-          <h3 style="font-size: 2rem;">Nowoczesna technologia w Twoim gabinecie</h3>
-          <p>Trzy długości fal w jednym urządzeniu pozwalają pracować na różnych typach skóry i włosa. Zaawansowane chłodzenie szafirowe zwiększa komfort zabiegu. To wyrób medyczny z certyfikatami CE i FDA 510(k).</p>
+          <h3 style="font-size: 2rem;">Informacje o wyrobie</h3>
+          <p><strong>Nazwa handlowa:</strong> Primelase Excellence — laser diodowy.<br><strong>Przewidziane zastosowanie:</strong> [DO UZUPEŁNIENIA — dosłownie z instrukcji używania; producent podaje m.in. usuwanie owłosienia].<br><strong>Producent:</strong> [DO POTWIERDZENIA z etykiety — Cocoon Medical, grupa Sinclair].<br><strong>Reklamę prowadzi:</strong> LUVENE BEAUTY Karolina Sienkiewicz.</p>
+          <p class="small">To jest wyrób medyczny. Używaj go zgodnie z instrukcją używania lub etykietą.</p>
           <p class="small">Konfiguracja głowic: [DO UZUPEŁNIENIA] — ustalimy indywidualnie.</p>
         </div>
       </div>
@@ -691,11 +708,11 @@
   <section class="scroll-margin" id="jak-dziala">
     <div class="container">
       <h2>Jak to działa? 4 proste kroki</h2>
-      <figure class="foto foto-szeroka"><img src="img/primelase-gabinet.jpg" alt="Zabieg laserem Primelase Excellence w gabinecie, operator w okularach ochronnych" width="1920" height="750" loading="lazy"><figcaption>Primelase w gabinecie · fot. Sinclair</figcaption></figure>
+      <figure class="foto foto-szeroka"><img src="img/primelase-glowica-nogi.jpg" alt="Głowica lasera Primelase Excellence podczas zabiegu na nodze" width="841" height="443" loading="lazy"><figcaption>fot. Sinclair</figcaption></figure>
       <div class="steps" style="margin-top:32px;">
         <div class="step"><div class="step-num"></div><div><h3>Rezerwacja i zadatek</h3><p>Wybierasz termin, podpisujemy umowę ramową, płacisz 30% zadatku.</p></div></div>
-        <div class="step"><div class="step-num"></div><div><h3>Dowóz i uruchomienie</h3><p>Przywozimy laser, ustawiamy w Twoim gabinecie i sprawdzamy działanie.</p></div></div>
-        <div class="step"><div class="step-num"></div><div><h3>Szkolenie stanowiskowe</h3><p>Przeszkolimy Ciebie lub wskazaną kosmetolożkę z obsługi i bezpieczeństwa.</p></div></div>
+        <div class="step"><div class="step-num"></div><div><h3>Transport</h3><p>Przywozimy laser i ustawiamy go w Twoim gabinecie.</p></div></div>
+        <div class="step"><div class="step-num"></div><div><h3>Szkolenie z obsługi</h3><p>Przeszkolimy Ciebie lub wskazaną kosmetolożkę z obsługi i bezpieczeństwa — w cenie najmu.</p></div></div>
         <div class="step"><div class="step-num"></div><div><h3>Odbiór i protokół</h3><p>Po zakończeniu odbieramy urządzenie i spisujemy protokół ze zdjęciami.</p></div></div>
       </div>
     </div>
@@ -709,9 +726,9 @@
         <div class="card">
           <h3>W cenie</h3>
           <ul class="features">
-            <li>Szkolenie stanowiskowe przy pierwszym najmie</li>
+            <li>Szkolenie z obsługi przy pierwszym najmie</li>
             <li>Okulary ochronne operatora i klientki</li>
-            <li>Dowóz i odbiór w Kielcach i 30 km (dalej 1,50 zł/km)</li>
+            <li>Transport w obie strony w Kielcach i do 30 km (dalej 1,50 zł/km)</li>
           </ul>
         </div>
         <div class="card">
@@ -736,7 +753,7 @@
       <div style="margin-top:16px;">
         <details>
           <summary>Kto może obsługiwać laser?</summary>
-          <p>Wymagamy przeszkolenia stanowiskowego. Laser może obsługiwać kosmetolożka lub osoba z doświadczeniem w branży beauty po szkoleniu, które zapewniamy.</p>
+          <p>Laser obsługują wyłącznie osoby przeszkolone, zgodnie z wymaganiami instrukcji używania producenta. Szkolenie z obsługi zapewniamy w cenie najmu.</p>
         </details>
         <details>
           <summary>Czy jest limit impulsów?</summary>
@@ -747,8 +764,8 @@
           <p>Dostarczamy laser zamienny lub zwracamy czynsz za niewykorzystaną dobę. Zależy nam na Twoim bezpieczeństwie.</p>
         </details>
         <details>
-          <summary>Jak daleko dowozicie laser?</summary>
-          <p>Działamy w całym województwie świętokrzyskim. Dowóz w Kielcach i 30 km jest w cenie, dalej doliczamy 1,50 zł/km.</p>
+          <summary>Jak daleko przywozicie laser?</summary>
+          <p>Działamy w całym województwie świętokrzyskim. Transport w Kielcach i do 30 km jest w cenie, dalej doliczamy 1,50 zł/km.</p>
         </details>
         <details>
           <summary>Czy wystawiacie fakturę VAT?</summary>
@@ -832,7 +849,8 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p><strong>LUVENE BEAUTY Karolina Sienkiewicz</strong><br>Gołuchów 77, 28-404 Gołuchów (gm. Kije)<br>NIP 6621824806, REGON 521118853<br>e-mail: sienkiewicz.karolina.pl@gmail.com, tel. [TELEFON]</p>
-      <p>Primelase i Primelase Excellence są znakami towarowymi Cocoon Medical; strona nie jest powiązana z producentem. Zdjęcia urządzenia: materiały producenta (Sinclair, primelase-excellence.com).</p>
+      <p>Primelase i Primelase Excellence są znakami towarowymi Cocoon Medical (grupa Sinclair); strona nie jest powiązana z producentem. Zdjęcia urządzenia: materiały producenta (Sinclair, primelase-excellence.com).</p>
+      <p>Treści na tej stronie są skierowane wyłącznie do profesjonalistów. To jest wyrób medyczny. Używaj go zgodnie z instrukcją używania lub etykietą.</p>
       <p>© 2026 LUVENE BEAUTY. Wszelkie prawa zastrzeżone.</p>
     </div>
   </footer>
@@ -842,6 +860,19 @@
 <a href="#kontakt" class="btn-rezerwacja-mobile focus-visible" aria-label="Zarezerwuj termin">Zarezerwuj termin</a>
 
 <script>
+  // Bramka profesjonalisty: ustawa o wyrobach medycznych (art. 55 ust. 2 pkt 3) zakazuje reklamy
+  // wyrobów dla profesjonalistów kierowanej do publicznej wiadomości.
+  (function() {
+    const bramka = document.getElementById('bramka');
+    let potwierdzone = false;
+    try { potwierdzone = sessionStorage.getItem('luvene-profesjonalista') === 'tak'; } catch (e) { potwierdzone = false; }
+    bramka.hidden = potwierdzone;
+    document.getElementById('bramka-tak').addEventListener('click', function() {
+      try { sessionStorage.setItem('luvene-profesjonalista', 'tak'); } catch (e) { /* bez pamięci sesji bramka wróci po odświeżeniu */ }
+      bramka.hidden = true;
+    });
+  })();
+
   // Kalkulator opłacalności
   (function() {
     const cenaInput = document.getElementById('cena-zabiegu');

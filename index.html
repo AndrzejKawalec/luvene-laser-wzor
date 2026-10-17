@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:image" content="https://andrzejkawalec.github.io/luvene-laser-wzor/img/primelase-zabieg-nogi.jpg">
-  <meta name="theme-color" content="#fa77ab">
+  <meta name="theme-color" content="#1b2430">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,20 +29,20 @@
   </script>
   <style>
     :root {
-      --roz: #fa77ab;
-      --roz-jasny: #ff9bc4;
-      --roz-ciemny: #b4306c;
-      --sliwka: #4a1830;
-      --tekst: #32373c;
-      --szary: #6b6470;
+      --roz: #2f6fb0;
+      --roz-jasny: #8fc1f0;
+      --roz-ciemny: #1d4f86;
+      --sliwka: #1b2430;
+      --tekst: #2a3139;
+      --szary: #5f6b78;
       --tlo: #ffffff;
-      --tlo-roz: #fff1f6;
+      --tlo-roz: #eef3f8;
       --radius: 22px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Montserrat', system-ui, sans-serif; color: var(--tekst); background: var(--tlo); line-height: 1.6; }
-    h1, h2, h3, .logo-tekst { font-family: 'Alatsi', 'Montserrat', sans-serif; font-weight: 400; line-height: 1.15; margin: 0 0 16px; }
+    body { margin: 0; font-family: 'Manrope', system-ui, sans-serif; color: var(--tekst); background: var(--tlo); line-height: 1.6; }
+    h1, h2, h3, .logo-tekst { font-family: 'Sora', 'Manrope', sans-serif; font-weight: 600; letter-spacing: -.01em; line-height: 1.15; margin: 0 0 16px; }
     h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
     h3 { font-size: 1.35rem; }
     p { margin: 0 0 14px; }
@@ -56,98 +56,106 @@
 
     /* Logo: własny znak — promień lasera w rombie */
     .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
-    .logo svg { width: 30px; height: 30px; flex: none; }
-    .logo-tekst { margin: 0; font-size: 1.15rem; letter-spacing: .06em; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.6); }
+    .logo svg { width: 36px; height: 36px; flex: none; }
+    .logo-tekst { margin: 0; font-size: 1.05rem; font-weight: 700; letter-spacing: .04em; line-height: 1; }
+    .logo-tekst small { display: block; font-family: 'Manrope', sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .42em; color: var(--roz-jasny); margin-top: 4px; }
 
     /* Nawigacja */
-    header { position: sticky; top: 0; z-index: 50; background: var(--roz); box-shadow: 0 2px 14px rgba(180,48,108,.25); }
+    header { position: sticky; top: 0; z-index: 50; background: rgba(27,36,48,.96); backdrop-filter: blur(8px); box-shadow: 0 2px 14px rgba(29,79,134,.25); }
     .nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; position: relative; }
     .nav-linki { display: none; gap: 24px; }
     .nav-linki a { color: #fff; text-decoration: none; font-weight: 600; font-size: .9rem; }
     .nav-linki a:hover { text-decoration: underline; }
     .menu-przycisk { background: none; border: 1.5px solid #fff; color: #fff; border-radius: 8px; padding: 6px 12px; font: inherit; font-weight: 600; cursor: pointer; }
-    .nav-linki.otwarte { display: flex; flex-direction: column; position: absolute; top: 100%; left: -16px; right: -16px; background: var(--roz); padding: 16px 24px 24px; }
+    .nav-linki.otwarte { display: flex; flex-direction: column; position: absolute; top: 100%; left: -16px; right: -16px; background: var(--sliwka); padding: 16px 24px 24px; }
     @media (min-width: 900px) { .menu-przycisk { display: none; } .nav-linki { display: flex; } }
 
-    /* Hero: zdjęcie producenta pod różową nakładką */
-    .hero { position: relative; min-height: min(92vh, 860px); display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; padding: 96px 0; }
-    .hero-tlo { position: absolute; inset: 0; background: url('img/primelase-zabieg-nogi.jpg') center / cover no-repeat; transform: scale(1.04); }
-    .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(250,119,171,.78) 0%, rgba(214,79,140,.82) 100%); }
-    .hero .kontener { position: relative; z-index: 2; }
-    .hero .logo { margin-bottom: 28px; }
-    .hero .logo svg { width: 46px; height: 46px; }
-    .hero .logo-tekst { font-size: clamp(1.4rem, 3vw, 2rem); }
-    .hero h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); max-width: 900px; margin-inline: auto; text-shadow: 0 2px 18px rgba(74,24,48,.25); }
-    .hero .lead { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 500; max-width: 680px; margin: 0 auto 32px; }
-    .hero .dla-kogo { margin-top: 26px; font-size: .85rem; opacity: .9; }
-    .hero figcaption { position: absolute; z-index: 2; right: 14px; bottom: 10px; font-size: .7rem; opacity: .8; }
-
+    /* Hero: grafit i granat, tekst obok zdjęcia lasera */
+    .hero { position: relative; overflow: hidden; color: #fff; padding: 72px 0 80px;
+      background: radial-gradient(circle at 78% 45%, rgba(47,111,176,.55) 0%, rgba(47,111,176,0) 45%), linear-gradient(150deg, #1b2430 0%, #1a2b40 55%, #16324f 100%); }
+    .hero-uklad { display: grid; gap: 40px; grid-template-columns: 1fr; align-items: center; }
+    @media (min-width: 900px) { .hero-uklad { grid-template-columns: 1.15fr .85fr; } }
+    @media (max-width: 899px) { .hero-laser img { height: 380px; } }
+    .nadtytul { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--roz-jasny); }
+    .hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); }
+    .hero .lead { font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: #d5dee8; max-width: 560px; margin-bottom: 30px; }
+    .hero .przyciski { justify-content: flex-start; }
+    .hero-fakty { list-style: none; padding: 0; margin: 36px 0 0; display: flex; flex-wrap: wrap; gap: 14px 34px; }
+    .hero-fakty li { font-size: .82rem; color: #aebccb; border-left: 3px solid var(--roz); padding-left: 12px; }
+    .hero-fakty strong { display: block; font-family: 'Sora', sans-serif; font-size: 1.15rem; color: #fff; }
+    .hero .dla-kogo { margin-top: 26px; font-size: .8rem; color: #aebccb; }
+    .hero-laser { margin: 0; position: relative; display: flex; justify-content: center; padding: 28px 20px 34px; border-radius: 28px; background: radial-gradient(circle at 50% 38%, #ffffff 0%, #e4edf6 52%, #c3d4e6 100%); box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+    .hero-laser img { height: min(520px, 66vh); width: auto; filter: drop-shadow(0 22px 26px rgba(20,30,45,.28)); }
+    .hero-laser figcaption { position: absolute; bottom: 10px; right: 16px; font-size: .7rem; color: var(--szary); }
     .przyciski { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-    .btn { display: inline-block; border: 2px solid transparent; border-radius: 50px; padding: 14px 30px; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+    .btn { display: inline-block; border: 2px solid transparent; border-radius: 12px; padding: 14px 30px; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .15s, box-shadow .15s; }
     .btn:hover { transform: translateY(-2px); }
-    .btn-bialy { background: #fff; color: var(--roz-ciemny); box-shadow: 0 10px 24px rgba(74,24,48,.18); }
-    .btn-kontur { border-color: #fff; color: #fff; background: transparent; }
-    .btn-roz { background: var(--roz); color: #fff; box-shadow: 0 10px 24px rgba(250,119,171,.35); }
+    .btn-bialy { background: var(--roz); color: #fff; box-shadow: 0 10px 24px rgba(20,30,45,.18); }
+    .btn-kontur { border-color: rgba(255,255,255,.55); color: #fff; background: transparent; }
+    .btn-roz { background: var(--roz); color: #fff; box-shadow: 0 10px 24px rgba(47,111,176,.35); }
     .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--sliwka); outline-offset: 3px; }
 
     /* Sekcje różowe z białymi kafelkami */
-    .roz { background: linear-gradient(160deg, var(--roz) 0%, #f0609c 100%); color: #fff; }
+    .roz { background: linear-gradient(160deg, #1b2430 0%, #16324f 100%); color: #fff; }
     .roz-jasne { background: var(--tlo-roz); }
     .siatka { display: grid; gap: 22px; grid-template-columns: 1fr; }
     @media (min-width: 700px) { .siatka-2 { grid-template-columns: repeat(2, 1fr); } .siatka-3, .siatka-4 { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1000px) { .siatka-3 { grid-template-columns: repeat(3, 1fr); } .siatka-4 { grid-template-columns: repeat(4, 1fr); } }
-    .kafel { background: #fff; color: var(--tekst); border-radius: var(--radius); padding: 30px 26px; box-shadow: 0 16px 40px rgba(74,24,48,.12); }
+    .kafel { background: #fff; color: var(--tekst); border-radius: var(--radius); padding: 30px 26px; box-shadow: 0 16px 40px rgba(20,30,45,.12); }
     .kafel h3 { color: var(--roz-ciemny); }
-    .kafel-szklo { background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.35); box-shadow: none; backdrop-filter: blur(4px); }
+    .kafel-szklo { background: rgba(255,255,255,.06); color: #fff; border: 1px solid rgba(143,193,240,.25); box-shadow: none; }
     .kafel-szklo h3 { color: #fff; }
-    .ikona { width: 52px; height: 52px; border-radius: 50%; background: #fff; color: var(--roz); display: grid; place-items: center; margin-bottom: 18px; }
+    .kafel-szklo .ikona { background: rgba(143,193,240,.14); color: var(--roz-jasny); }
+    .ikona { width: 52px; height: 52px; border-radius: 14px; background: var(--tlo-roz); color: var(--roz-ciemny); display: grid; place-items: center; margin-bottom: 18px; }
     .ikona svg { width: 26px; height: 26px; }
 
     /* Kalkulator z suwakami */
-    .kalkulator { display: grid; gap: 28px; grid-template-columns: 1fr; background: #fff; border-radius: 28px; padding: clamp(22px, 4vw, 44px); box-shadow: 0 20px 50px rgba(74,24,48,.12); }
+    .kalkulator { display: grid; gap: 28px; grid-template-columns: 1fr; background: #fff; border-radius: 28px; padding: clamp(22px, 4vw, 44px); box-shadow: 0 20px 50px rgba(20,30,45,.12); }
     @media (min-width: 900px) { .kalkulator { grid-template-columns: 1.2fr 1fr; } }
     .suwak { margin-bottom: 26px; }
     .suwak label { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 10px; }
     .suwak output { color: var(--roz-ciemny); font-weight: 800; }
     input[type=range] { width: 100%; accent-color: var(--roz); height: 6px; }
     .wyniki { background: var(--tlo-roz); border-radius: 22px; padding: 26px; display: grid; gap: 14px; align-content: start; }
-    .wynik { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed rgba(180,48,108,.25); padding-bottom: 10px; }
+    .wynik { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed rgba(29,79,134,.25); padding-bottom: 10px; }
     .wynik strong { font-size: 1.35rem; color: var(--sliwka); }
     .wynik-glowny strong { font-size: 2rem; color: var(--roz-ciemny); }
 
     /* Kroki */
     .krok { position: relative; padding-top: 70px; }
-    .krok-nr { position: absolute; top: 0; left: 26px; font-family: 'Alatsi', sans-serif; font-size: 4rem; line-height: 1; color: var(--roz); opacity: .9; }
-    .zdjecie-pasek { margin: 0 0 40px; border-radius: 28px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(74,24,48,.14); }
+    .krok-nr { position: absolute; top: 24px; left: 26px; font-family: 'Sora', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .12em; color: var(--roz); }
+    .krok-nr::before { content: "KROK "; }
+    .krok { border-top: 4px solid var(--roz); }
+    .zdjecie-pasek { margin: 0 0 40px; border-radius: 28px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(20,30,45,.14); }
     .zdjecie-pasek img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
-    figcaption.podpis { position: absolute; right: 12px; bottom: 10px; font-size: .7rem; color: #fff; background: rgba(74,24,48,.55); padding: 3px 10px; border-radius: 50px; }
+    figcaption.podpis { position: absolute; right: 12px; bottom: 10px; font-size: .7rem; color: #fff; background: rgba(20,30,45,.55); padding: 3px 10px; border-radius: 50px; }
 
     /* Urządzenie */
     .urzadzenie { display: grid; gap: 40px; grid-template-columns: 1fr; align-items: center; }
     @media (min-width: 900px) { .urzadzenie { grid-template-columns: .9fr 1.1fr; } }
-    .scena { position: relative; margin: 0; aspect-ratio: 4 / 5; max-height: 620px; border-radius: 32px; overflow: hidden; background: radial-gradient(circle at 50% 40%, #fff 0%, #ffe3ee 48%, #ffc6dc 100%); }
-    .scena img { position: absolute; left: 50%; bottom: 7%; height: 86%; width: auto; transform: translateX(-50%); filter: drop-shadow(0 20px 26px rgba(74,24,48,.22)); }
-    .scena::after { content: ""; position: absolute; left: 24%; right: 24%; bottom: 5.5%; height: 4%; border-radius: 50%; background: radial-gradient(ellipse, rgba(74,24,48,.3), rgba(74,24,48,0) 70%); }
+    .scena { position: relative; margin: 0; aspect-ratio: 4 / 5; max-height: 620px; border-radius: 32px; overflow: hidden; background: radial-gradient(circle at 50% 40%, #ffffff 0%, #e4edf6 50%, #c9d8e8 100%); }
+    .scena img { position: absolute; left: 50%; bottom: 7%; height: 86%; width: auto; transform: translateX(-50%); filter: drop-shadow(0 20px 26px rgba(20,30,45,.22)); }
+    .scena::after { content: ""; position: absolute; left: 24%; right: 24%; bottom: 5.5%; height: 4%; border-radius: 50%; background: radial-gradient(ellipse, rgba(20,30,45,.3), rgba(20,30,45,0) 70%); }
     .scena figcaption { position: absolute; left: 16px; top: 16px; font-size: .72rem; color: var(--sliwka); background: rgba(255,255,255,.85); padding: 4px 12px; border-radius: 50px; }
     .cechy { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 10px; grid-template-columns: 1fr; }
     @media (min-width: 560px) { .cechy { grid-template-columns: 1fr 1fr; } }
-    .cechy li { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); border-radius: 14px; padding: 10px 14px; font-size: .92rem; }
+    .cechy li { background: rgba(255,255,255,.06); border: 1px solid rgba(143,193,240,.25); border-radius: 14px; padding: 10px 14px; font-size: .92rem; }
     .cechy strong { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; opacity: .85; font-weight: 600; }
     .info-wyrob { background: #fff; color: var(--tekst); border-radius: 18px; padding: 20px 22px; font-size: .9rem; }
     .info-wyrob p { margin-bottom: 8px; }
     .ostrzezenie { font-weight: 700; color: var(--roz-ciemny); margin: 10px 0 0; }
 
     /* Cennik */
-    .cena { font-family: 'Alatsi', sans-serif; font-size: 2.6rem; color: var(--roz-ciemny); line-height: 1.1; margin: 6px 0 8px; }
-    .cena small { font-family: 'Montserrat', sans-serif; font-size: .85rem; color: var(--szary); }
+    .cena { font-family: 'Sora', sans-serif; font-size: 2.6rem; color: var(--roz-ciemny); line-height: 1.1; margin: 6px 0 8px; }
+    .cena small { font-family: 'Manrope', sans-serif; font-size: .85rem; color: var(--szary); }
     .kafel.wyrozniony { outline: 3px solid var(--roz); position: relative; }
-    .odznaka { position: absolute; top: -14px; left: 24px; background: var(--roz); color: #fff; font-size: .72rem; font-weight: 700; padding: 4px 12px; border-radius: 50px; text-transform: uppercase; letter-spacing: .05em; }
+    .odznaka { position: absolute; top: -14px; left: 24px; background: var(--roz); color: #fff; font-size: .72rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; text-transform: uppercase; letter-spacing: .05em; }
     .podtytul { color: var(--szary); font-size: .85rem; font-weight: 600; }
     .lista { padding-left: 20px; margin: 0; }
     .lista li { margin-bottom: 8px; }
 
     /* FAQ */
-    details { background: #fff; border-radius: 18px; padding: 18px 22px; margin-bottom: 12px; box-shadow: 0 8px 22px rgba(74,24,48,.07); }
+    details { background: #fff; border-radius: 18px; padding: 18px 22px; margin-bottom: 12px; box-shadow: 0 8px 22px rgba(20,30,45,.07); }
     summary { font-weight: 700; cursor: pointer; color: var(--sliwka); }
     details p { margin: 12px 0 0; }
 
@@ -157,15 +165,15 @@
     .kontakt-kafel .etykieta { font-size: .78rem; font-weight: 700; letter-spacing: .1em; color: var(--szary); }
     .kontakt-kafel .wartosc { font-weight: 700; color: var(--roz-ciemny); word-break: break-word; }
     .obszar { text-align: center; margin: 34px 0 48px; }
-    .obszar strong { display: block; font-family: 'Alatsi', sans-serif; font-size: 1.4rem; color: var(--sliwka); font-weight: 400; }
+    .obszar strong { display: block; font-family: 'Sora', sans-serif; font-size: 1.4rem; color: var(--sliwka); font-weight: 400; }
     form label { display: block; font-weight: 600; font-size: .88rem; margin-bottom: 6px; }
-    form input, form select, form textarea { width: 100%; font: inherit; border: 1.5px solid #f1c6d7; border-radius: 14px; padding: 12px 14px; background: #fff; }
+    form input, form select, form textarea { width: 100%; font: inherit; border: 1.5px solid #cfdbe7; border-radius: 14px; padding: 12px 14px; background: #fff; }
     .pola { display: grid; gap: 16px; grid-template-columns: 1fr; margin-bottom: 16px; }
     @media (min-width: 600px) { .pola { grid-template-columns: 1fr 1fr; } }
     .zgoda { display: flex; gap: 10px; align-items: flex-start; margin: 16px 0; font-size: .85rem; }
     .zgoda input { width: auto; margin-top: 4px; }
 
-    footer { background: var(--sliwka); color: #f5dbe6; padding: 48px 0 110px; font-size: .88rem; }
+    footer { background: var(--sliwka); color: #c9d4df; padding: 48px 0 110px; font-size: .88rem; }
     footer p { margin-bottom: 12px; }
     footer .logo { margin-bottom: 18px; }
 
@@ -173,7 +181,7 @@
     @media (min-width: 900px) { .rezerwacja-mobile { display: none; } }
 
     /* Bramka profesjonalisty */
-    .bramka { position: fixed; inset: 0; z-index: 1000; background: rgba(74,24,48,.75); display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .bramka { position: fixed; inset: 0; z-index: 1000; background: rgba(20,30,45,.75); display: flex; align-items: center; justify-content: center; padding: 16px; }
     .bramka[hidden] { display: none; }
     .bramka-okno { background: #fff; max-width: 520px; border-radius: 24px; padding: 30px; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
     .bramka-okno h2 { font-size: 1.7rem; color: var(--roz-ciemny); }
@@ -196,12 +204,12 @@
 </div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="znak" viewBox="0 0 48 48"><path d="M24 3 45 24 24 45 3 24Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 12v24M12 24h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="4.5" fill="currentColor"/></symbol>
+  <symbol id="znak" viewBox="0 0 48 48"><rect x="1.5" y="1.5" width="45" height="45" rx="12" fill="#2f6fb0"/><path d="M16 36V12h10a7.5 7.5 0 0 1 0 15H16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 27l9 9" stroke="#8fc1f0" stroke-width="3.2" stroke-linecap="round"/><circle cx="36.5" cy="37.5" r="2.6" fill="#8fc1f0"/></symbol>
 </svg>
 
 <header>
   <div class="kontener nav">
-    <a href="#start" class="logo" aria-label="PRO RENTAL MEDICAL – strona główna"><svg><use href="#znak"/></svg><span class="logo-tekst">PRO RENTAL MEDICAL</span></a>
+    <a href="#start" class="logo" aria-label="PRO RENTAL MEDICAL – strona główna"><svg><use href="#znak"/></svg><span class="logo-tekst">PRO RENTAL<small>MEDICAL</small></span></a>
     <button class="menu-przycisk" type="button" aria-expanded="false" aria-controls="menu-glowne">Menu</button>
     <nav class="nav-linki" id="menu-glowne" aria-label="Menu główne">
       <a href="#dlaczego">Dlaczego najem</a>
@@ -218,44 +226,53 @@
 <main>
   <!-- 1. HERO -->
   <section class="hero" id="start">
-    <div class="hero-tlo" role="img" aria-label="Zabieg głowicą lasera Primelase Excellence na nodze, w tle urządzenie"></div>
-    <div class="kontener">
-      <div class="logo"><svg><use href="#znak"/></svg><span class="logo-tekst">PRO RENTAL MEDICAL</span></div>
-      <h1>Laser medyczny Primelase Excellence w Twoim salonie</h1>
-      <p class="lead">Na dzień, weekend albo tydzień. Bez kosztownej inwestycji w sprzęt. Transport i szkolenie z obsługi w cenie najmu.</p>
-      <div class="przyciski">
-        <a href="#cennik" class="btn btn-bialy">Sprawdź ceny</a>
-        <a href="#kontakt" class="btn btn-kontur">Zarezerwuj termin</a>
+    <div class="kontener hero-uklad">
+      <div>
+        <p class="nadtytul">Wynajem lasera diodowego dla salonów i gabinetów</p>
+        <h1>Laser medyczny Primelase Excellence w Twoim salonie</h1>
+        <p class="lead">Na dzień, weekend albo tydzień. Bez kosztownej inwestycji w sprzęt. Transport i szkolenie z obsługi w cenie najmu.</p>
+        <div class="przyciski">
+          <a href="#cennik" class="btn btn-bialy">Sprawdź ceny</a>
+          <a href="#kontakt" class="btn btn-kontur">Zarezerwuj termin</a>
+        </div>
+        <ul class="hero-fakty">
+          <li><strong>od 790 zł</strong>netto za dobę</li>
+          <li><strong>bez limitu</strong>impulsów</li>
+          <li><strong>świętokrzyskie</strong>transport w cenie</li>
+        </ul>
+        <p class="dla-kogo">Oferta wyłącznie dla salonów kosmetycznych, gabinetów i osób zawodowo wykonujących zabiegi.</p>
       </div>
-      <p class="dla-kogo">Oferta wyłącznie dla salonów kosmetycznych, gabinetów i osób zawodowo wykonujących zabiegi.</p>
+      <figure class="hero-laser">
+        <img src="img/primelase-urzadzenie.webp" alt="Laser diodowy Primelase Excellence — urządzenie z ekranem dotykowym i głowicą zabiegową" width="394" height="818" fetchpriority="high">
+        <figcaption>Primelase Excellence · fot. Sinclair</figcaption>
+      </figure>
     </div>
-    <figcaption>fot. Sinclair</figcaption>
   </section>
 
   <!-- 2. DLACZEGO NAJEM -->
-  <section class="roz" id="dlaczego">
+  <section id="dlaczego">
     <div class="kontener">
       <div class="naglowek-sekcji">
         <h2>Dlaczego najem zamiast zakupu?</h2>
         <p>Profesjonalny laser w gabinecie wtedy, gdy masz zapisane klientki.</p>
       </div>
       <div class="siatka siatka-4">
-        <article class="kafel kafel-szklo">
+        <article class="kafel">
           <div class="ikona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10V20h14V10M12 3 3 10h18Z"/></svg></div>
           <h3>Bez kosztownego zakupu</h3>
           <p>Nie zamrażasz kapitału w drogim sprzęcie. Płacisz tylko za konkretny termin.</p>
         </article>
-        <article class="kafel kafel-szklo">
+        <article class="kafel">
           <div class="ikona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
           <h3>Pracujesz od pierwszego dnia</h3>
           <p>Ustawiasz laser w swoim gabinecie, umawiasz klientki i realizujesz zabiegi bez czekania na zwrot inwestycji.</p>
         </article>
-        <article class="kafel kafel-szklo">
+        <article class="kafel">
           <div class="ikona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg></div>
           <h3>Praca według instrukcji producenta</h3>
           <p>Głowicę i parametry zabiegu dobierasz zgodnie z instrukcją używania i szkoleniem — do rodzaju skóry i włosa.</p>
         </article>
-        <article class="kafel kafel-szklo">
+        <article class="kafel">
           <div class="ikona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.1M17 19a2 2 0 1 0 0-.1"/></svg></div>
           <h3>Transport i szkolenie</h3>
           <p>Przywozimy urządzenie i szkolimy z obsługi Ciebie lub Twoją kosmetolożkę. Transport i szkolenie z obsługi w cenie najmu.</p>
@@ -318,10 +335,7 @@
   <!-- 5. URZĄDZENIE -->
   <section class="roz" id="urzadzenie">
     <div class="kontener urzadzenie">
-      <figure class="scena">
-        <img src="img/primelase-urzadzenie.webp" alt="Laser diodowy Primelase Excellence — urządzenie z ekranem dotykowym i głowicą zabiegową" width="394" height="818" loading="lazy">
-        <figcaption>fot. Sinclair</figcaption>
-      </figure>
+      <figure class="zdjecie-pasek" style="margin:0;"><img src="img/primelase-zabieg-nogi.jpg" alt="Zabieg głowicą lasera Primelase Excellence, w tle urządzenie" width="960" height="760" loading="lazy" style="aspect-ratio:960/760;"><figcaption class="podpis">fot. Sinclair</figcaption></figure>
       <div>
         <h2>Laser Primelase Excellence</h2>
         <p>Laser diodowy z oznakowaniem CE. Dane techniczne według materiałów producenta.</p>
@@ -512,7 +526,7 @@
 
 <footer>
   <div class="kontener">
-    <a href="#start" class="logo"><svg><use href="#znak"/></svg><span class="logo-tekst">PRO RENTAL MEDICAL</span></a>
+    <a href="#start" class="logo"><svg><use href="#znak"/></svg><span class="logo-tekst">PRO RENTAL<small>MEDICAL</small></span></a>
     <p>[Pełna nazwa firmy, adres, NIP i REGON — DO UZUPEŁNIENIA]<br>e-mail: sienkiewicz.karolina.pl@gmail.com, tel. [TELEFON]</p>
     <p>Treści na tej stronie są skierowane wyłącznie do profesjonalistów. To jest wyrób medyczny. Używaj go zgodnie z instrukcją używania lub etykietą.</p>
     <p>Primelase i Primelase Excellence są znakami towarowymi Cocoon Medical (grupa Sinclair); strona nie jest powiązana z producentem. Zdjęcia urządzenia: materiały producenta (Sinclair, primelase-excellence.com).</p>

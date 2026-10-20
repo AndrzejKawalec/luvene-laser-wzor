@@ -1,3 +1,5 @@
-# Wzór strony — przed startem produkcyjnym zmienić na Allow i usunąć noindex z <head>.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://kosmetycznywynajem.pl/sitemap.xml

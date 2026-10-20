@@ -1,0 +1,1 @@
+{ "name": "Kosmetyczny Wynajem", "short_name": "KW", "start_url": "./", "display": "browser", "background_color": "#1b2430", "theme_color": "#1b2430", "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }] }

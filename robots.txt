@@ -1,0 +1,3 @@
+# Wzór strony — przed startem produkcyjnym zmienić na Allow i usunąć noindex z <head>.
+User-agent: *
+Disallow: /

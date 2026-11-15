@@ -178,6 +178,7 @@ footer .logo { margin-bottom: 18px; }
 .artykul th, .artykul td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--piasek); vertical-align: top; }
 .artykul th { background: var(--tlo-roz); color: var(--lupek); }
 .artykul .tabela-przewijana { overflow-x: auto; }
+@media (max-width: 599px) { #leasing th, #leasing td { padding: 8px 6px; font-size: .84rem; } }
 .naglowek-strony { background: linear-gradient(160deg, #fdfbf9 0%, #f6efe9 100%); color: var(--tekst); padding: 56px 0 48px; border-bottom: 1px solid var(--piasek); }
 .naglowek-strony h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); max-width: 860px; }
 .naglowek-strony p { color: var(--tekst); max-width: 720px; }

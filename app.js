@@ -43,12 +43,14 @@
   if (!form) return;
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const pole = function (id) { return document.getElementById(id).value.trim(); };
+    // pole może nie istnieć na starszej wersji strony, która ładuje ten sam skrypt
+    const pole = function (id) { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
     const temat = encodeURIComponent('Rezerwacja lasera – ' + pole('salon') + ' (' + pole('miejscowosc') + ')');
     const cialo = encodeURIComponent(
       'Dzień dobry,\n\nChcę zarezerwować termin lasera Primelase Excellence.\n\n' +
       'Salon: ' + pole('salon') + '\nMiejscowość: ' + pole('miejscowosc') + '\nTelefon: ' + pole('telefon') +
       '\nPreferowany termin: ' + pole('termin') + '\nWariant: ' + pole('wariant') +
+      (pole('pietro') ? '\nGabinet: ' + pole('pietro') : '') +
       (pole('wiadomosc') ? '\n\nWiadomość: ' + pole('wiadomosc') : '') + '\n\nPozdrawiam,\n' + pole('salon')
     );
     window.location.href = 'mailto:' + form.dataset.email + '?subject=' + temat + '&body=' + cialo;
